@@ -7,22 +7,23 @@ def read_readme():
 
 
 def main():
-    project_name = "<project-name>"
+    package_name = "project-template"  # TODO: Change.
+    package = "project_template"  # TODO: Change.
+    subpackages = find_namespace_packages(".", include=[f"{package}.*"])
 
     setup(
-        name=project_name,
-        version="<project-version>",
-        author="<author-name>",
-        author_email="<author-email>",
-        description="<description>",
+        name=package_name,
+        version="0.1",  # TODO: Change.
+        author="<author-name>",  # TODO: Change.
+        author_email="<author-email>",  # TODO: Change.
+        description="<description>",  # TODO: Change.
         long_description=read_readme(),
         license="Unlicense License",
-        keywords="<space-separated-keywords>",
-        classifiers=["<https://pypi.org/classifiers/>"],
-        url="<url>",
-        packages=find_namespace_packages(where="src"),
-        package_dir={"": "src"},
-        package_data={project_name: ["py.typed"]},
+        keywords="<space-separated-keywords>",  # TODO: Change.
+        classifiers=["<https://pypi.org/classifiers/>"],  # TODO: Change.
+        url="<url>",  # TODO: Change.
+        packages=[package, *subpackages],
+        package_data={package: ["py.typed"]},
         python_requires=">=3.6",
         zip_safe=False,
     )
