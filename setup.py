@@ -22,7 +22,7 @@ def main():
         url="<url>",
         packages=find_namespace_packages(where="src"),
         package_dir={project_name: "src"},
-        package_data={project_name: ["py.typed"],
+        package_data={project_name: ["py.typed"]},
         python_requires=">=3.6",
         zip_safe=False,
     )
