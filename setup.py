@@ -2,7 +2,7 @@ from setuptools import find_namespace_packages, setup  # type: ignore
 
 
 def read_readme():
-    with open("README.rst", "r", encoding="utf8") as f:
+    with open("README.md", "r", encoding="utf8") as f:
         return f.read()
 
 
