@@ -4,6 +4,7 @@ A template for my Python projects. Change all annotated fields in [setup.py](set
 
 ## TODO: Move to pyproject.toml?
 ## TODO: Import something from `project_template` in tests and assert it.
+## TODO: Makefile with build && install, format, check, clean.
 
 * `python setup.py build`
 * `python setup.py install`
