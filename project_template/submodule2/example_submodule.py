@@ -1,4 +1,6 @@
-from submodule1.subsubmodule.example_subsubmodule import example as sub_example
+from project_template.submodule1.subsubmodule.example_subsubmodule import (
+    example as sub_example,
+)
 
 
 def example():
