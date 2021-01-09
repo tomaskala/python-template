@@ -16,7 +16,7 @@ def main():
         author_email="<author-email>",
         description="<description>",
         long_description=read_readme(),
-        license="The Unlicense",
+        license="Unlicense License",
         keywords="<space-separated-keywords>",
         classifiers=["<https://pypi.org/classifiers/>"],
         url="<url>",
