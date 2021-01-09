@@ -1,2 +1,5 @@
 # python-template
-Python project template
+
+A template for my Python projects.
+
+## TODO: Move to pyproject.toml?

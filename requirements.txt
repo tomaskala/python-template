@@ -1,0 +1,6 @@
+# Static analysis, formatting and unit testing.
+black
+flake8
+isort>=5.0.0  # Need the "black" profile added in version 5.0.0.
+mypy
+pytest
