@@ -49,3 +49,4 @@ To use the template, do the following:
 
 ## TODO: Makefile with build && install, format, check, clean.
 ## TODO: Continuous integration.
+## TODO: Automatic version numbers.
