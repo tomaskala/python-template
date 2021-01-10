@@ -8,6 +8,7 @@ Basic directory structure for a Python project. The following is included:
 * Configuration for `isort`, `mypy`, `pylint` and `pytest`.
 * A dummy [setup.py](setup.py) to be adjusted per project. The current values allow building and installing the package as it is.
 * Automatic package versioning using [setuptools_scm](https://github.com/pypa/setuptools_scm) based on git tags.
+* GitHub Actions for CI. After each push with a tag matching `v[0-9]+.*`, the unit tests are run and `mypy` coverage is produced.
 
 The configuration files as well as the `.gitignore` file ignore (among others) the `.venv` and `venv` directories. The `pytest` config explicitly lists the [test](test) directory as the tests source, so all the other directories are ignored.
 
@@ -91,5 +92,3 @@ To use the template, do the following:
 * Rename the [project_template](project_template) directory to match the `package` variable in [setup.py](setup.py).
 * Remove the example files from the package directory and write your code.
 * Remove the example tests from the [test](test) directory and write your tests.
-
-## TODO: Continuous integration.
