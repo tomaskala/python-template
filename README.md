@@ -11,6 +11,9 @@ Basic directory structure for a Python project. The following is included:
 
 The configuration files as well as the `.gitignore` file ignore (among others) the `.venv` and `venv` directories. The `pytest` config explicitly lists the [test](test) directory as the tests source, so all the other directories are ignored.
 
+
+## Examples
+
 To set up the environment, run the following in the project root:
 ```
 $ python -m venv ./venv
@@ -49,6 +52,40 @@ $ python project_template/main.py
 
 In addition, there is a [Makefile](Makefile) to automate some of these tasks.
 
+
+## Git hooks
+
+To setup autoformatting after each commit, use the following scripts. Make sure you have `black` and `isort` installed!
+* `.git/hooks/pre-commit`
+    ```
+    #!/usr/bin/sh
+
+    # Get all changed (Added, Copied, Modified, Renamed) .py files.
+    FILES=$(git diff --cached --name-only --diff-filter=ACMR "*.py")
+    [ -z "$FILES" ] && exit 0
+
+    # Run black on them.
+    echo "$FILES" | xargs python -m black
+
+    # Run isort on them.
+    echo "$FILES" | xargs python -m isort
+
+    # Add the files back to staging.
+    echo "$FILES" | xargs git add
+
+    exit 0
+    ```
+* `.git/hooks/post-commit`
+    ```
+    #!/usr/bin/sh
+
+    git update-index -g
+    ```
+* Do not forget to set them as executable.
+
+
+## Using the template
+
 To use the template, do the following:
 * Change all the annotated fields in the [setup.py](setup.py) file.
 * Rename the [project_template](project_template) directory to match the `package` variable in [setup.py](setup.py).
@@ -56,4 +93,3 @@ To use the template, do the following:
 * Remove the example tests from the [test](test) directory and write your tests.
 
 ## TODO: Continuous integration.
-## TODO: Pre-commit hooks to format code.
