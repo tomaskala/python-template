@@ -1,6 +1,6 @@
 # Static analysis, formatting and unit testing.
 black
-flake8
-isort>=5.0.0  # Need the "black" profile added in version 5.0.0.
+isort>=5.0.0  # Need the "black" profile.
 mypy
-pytest
+pylint>=2.5.0  # Need pyproject.toml support.
+pytest>=6.0.0  # Need pyproject.toml support.
