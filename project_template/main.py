@@ -14,5 +14,9 @@ def main():
     sub_example("main")
 
 
+def return_true():
+    return True
+
+
 if __name__ == "__main__":
     main()

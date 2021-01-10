@@ -44,7 +44,6 @@ To use the template, do the following:
 * Remove the example tests from the [test](test) directory and write your tests.
 
 ## TODO: Move to pyproject.toml? This will need to fix static analysers' versions in requirements.txt.
-## TODO: Import something from `project_template` in tests and assert it.
 ## TODO: Makefile with build && install, format, check, clean.
 ## TODO: Configure black to ignore venv and other directories. Look into defaults, it already ignores some.
 ## TODO: Continuous integration.
