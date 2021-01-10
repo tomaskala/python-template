@@ -27,7 +27,7 @@ jobs:
           submodules: recursive
           
       - name: Run the pipeline
-        run: .ci/run
+        run: scripts/ci/run
       
       - name: Upload artifacts
         uses: actions/upload-artifact@v2

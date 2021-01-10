@@ -27,11 +27,9 @@ install:
 .PHONY: clean
 clean:
 	@find . -type d -name "__pycache__" -exec rm -r "{}" \+
-
-	@if [ -d ./.mypy_cache ]; then \
-		rm -r ./.mypy_cache; \
-	fi;
-
-	@if [ -d ./.pytest_cache ]; then \
-		rm -r ./.pytest_cache; \
-	fi;
+	@rm -rf ./.eggs
+	@rm -rf ./*.egg-info
+	@rm -rf ./.mypy_cache
+	@rm -rf ./.mypy-coverage
+	@rm -rf ./.pytest_cache
+	@rm -rf ./.tox

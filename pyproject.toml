@@ -3,6 +3,7 @@ requires = ["setuptools>=42.0.0", "wheel", "setuptools_scm[toml]>=3.4"]
 build-backend = "setuptools.build_meta"
 
 [tool.black]
+target-version = py38
 exclude = '\.eggs|\.git|\.hg|\.mypy_cache|\.tox|\.venv|venv|_build|buck-out|build|dist'
 
 [tool.isort]
@@ -32,11 +33,11 @@ envlist = py3,mypy
 passenv = CI
 commands =
     python -m pip install -e .[testing]
-    python -m pytest . {posargs}
+    python -m pytest .
 
 [testenv:mypy]
 skip_install = true
 commands =
     python -m pip install -e .[linting]
-    python -m mypy . --txt-report .mypy-coverage --html-report .mypy-coverage {posargs}
+    python -m mypy . --txt-report .mypy-coverage --html-report .mypy-coverage
 """
