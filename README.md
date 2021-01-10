@@ -41,12 +41,18 @@ $ python
 >>> project_template.main()
 ```
 
+You can also directly run any of the scripts from the project root:
+```
+$ python project_template/main.py
+```
+
+In addition, there is a [Makefile](Makefile) to automate some of these tasks.
+
 To use the template, do the following:
 * Change all the annotated fields in the [setup.py](setup.py) file.
 * Rename the [project_template](project_template) directory to match the `package` variable in [setup.py](setup.py).
 * Remove the example files from the package directory and write your code.
 * Remove the example tests from the [test](test) directory and write your tests.
 
-## TODO: Makefile with build && install, format, check, clean.
 ## TODO: Continuous integration.
 ## TODO: Automatic version numbers.
