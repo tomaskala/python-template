@@ -25,6 +25,11 @@ $ isort .
 $ mypy .
 ```
 
+To run unit tests, run the following:
+```
+$ py.test
+```
+
 To build and install the package, run the following:
 ```
 $ python setup.py build
