@@ -1,6 +1,6 @@
 # Python project template
 
-Basic directory structure for a Python project. The following is included:
+A basic structure for a Python project. The following is included:
 * A [.gitignore](.gitignore) file for Python projects.
 * [The Unlicense](https://unlicense.org/).
 * A directory structure for the [package itself](project_template) and for [unit tests](test).
@@ -11,6 +11,8 @@ Basic directory structure for a Python project. The following is included:
 * GitHub Actions for CI. After each push with a tag matching `v[0-9]+.*`, the unit tests are run and `mypy` coverage is produced.
 
 The configuration files as well as the `.gitignore` file ignore (among others) the `.venv` and `venv` directories. The `pytest` config explicitly lists the [test](test) directory as the tests source, so all the other directories are ignored.
+
+Currently, Python 3.8 is assumed, though this can easily be changed in `target-version` under `[tool.black]` in [pyproject.toml](pyproject.toml) and in `python_requires` in [setup.py](setup.py).
 
 
 ## Examples
