@@ -25,7 +25,7 @@ def main():
         url="<url>",  # TODO: Change.
         packages=[package, *subpackages],
         package_data={package: ["py.typed"]},
-        python_requires=">=3.6",
+        python_requires=">=3.8",
         zip_safe=False,
         extras_require={
             "testing": ["pytest"],
