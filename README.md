@@ -1,12 +1,13 @@
 # Python project template
 
 Basic directory structure for a Python project. The following is included:
-* A `.gitignore` file for Python projects.
+* A [.gitignore](.gitignore) file for Python projects.
 * [The Unlicense](https://unlicense.org/).
-* A directory structure for the package itself and for unit tests.
-* Several submodules in the package directory to demonstrate how imports work.
+* A directory structure for the [package itself](project_template) and for [unit tests](test).
+* Several submodules in the [package directory](project_template) to demonstrate how imports work.
 * Configuration for `isort`, `mypy`, `pylint` and `pytest`.
-* A dummy `setup.py` to be adjusted per project. The current values allow building and installing the package as it is.
+* A dummy [setup.py](setup.py) to be adjusted per project. The current values allow building and installing the package as it is.
+* Automatic package versioning using [setuptools_scm](https://github.com/pypa/setuptools_scm) based on git tags.
 
 The configuration files as well as the `.gitignore` file ignore (among others) the `.venv` and `venv` directories. The `pytest` config explicitly lists the [test](test) directory as the tests source, so all the other directories are ignored.
 
@@ -55,4 +56,4 @@ To use the template, do the following:
 * Remove the example tests from the [test](test) directory and write your tests.
 
 ## TODO: Continuous integration.
-## TODO: Automatic version numbers.
+## TODO: Pre-commit hooks to format code.
