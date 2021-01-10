@@ -13,7 +13,8 @@ def main():
 
     setup(
         name=package_name,
-        version="0.1",  # TODO: Change.
+        use_scm_version=True,
+        setup_requires=["setuptools_scm"],
         author="<author-name>",  # TODO: Change.
         author_email="<author-email>",  # TODO: Change.
         description="<description>",  # TODO: Change.
