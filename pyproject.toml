@@ -22,3 +22,21 @@ addopts = ["--verbose", "--doctest-modules"]
 xfail_strict = true
 
 [tool.setuptools_scm]
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py3,mypy
+
+[testenv]
+passenv = CI
+commands =
+    python -m pip install -e .[testing]
+    python -m pytest . {posargs}
+
+[testenv:mypy]
+skip_install = true
+commands =
+    python -m pip install -e .[linting]
+    python -m mypy . --txt-report .mypy-coverage --html-report .mypy-coverage {posargs}
+"""

@@ -31,7 +31,7 @@ $ python -m mypy .
 
 To run unit tests, run the following:
 ```
-$ python -m py.test .
+$ python -m pytest .
 ```
 
 To build and install the package, run the following:
