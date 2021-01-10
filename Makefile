@@ -18,7 +18,7 @@ check:
 
 .PHONY: test
 test:
-	@python -m py.test .
+	@python -m pytest .
 
 .PHONY: install
 install:

@@ -27,6 +27,10 @@ def main():
         package_data={package: ["py.typed"]},
         python_requires=">=3.6",
         zip_safe=False,
+        extras_require={
+            "testing": ["pytest"],
+            "linting": ["pytest", "mypy", "lxml"],
+        },
     )
 
 
