@@ -64,17 +64,17 @@ To setup autoformatting after each commit, use the following scripts. Make sure 
     #!/usr/bin/sh
 
     # Get all changed (Added, Copied, Modified, Renamed) .py files.
-    FILES=$(git diff --cached --name-only --diff-filter=ACMR "*.py")
-    [ -z "$FILES" ] && exit 0
+    files=$(git diff --cached --name-only --diff-filter=ACMR "*.py")
+    [ -z "$files" ] && exit 0
 
     # Run black on them.
-    echo "$FILES" | xargs python -m black
+    echo "$files" | xargs python -m black
 
     # Run isort on them.
-    echo "$FILES" | xargs python -m isort
+    echo "$files" | xargs python -m isort
 
     # Add the files back to staging.
-    echo "$FILES" | xargs git add
+    echo "$files" | xargs git add
 
     exit 0
     ```
