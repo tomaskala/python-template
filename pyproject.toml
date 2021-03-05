@@ -33,7 +33,7 @@ envlist = py3,mypy
 passenv = CI
 commands =
     python -m pip install -e .[testing]
-    python -m pytest .
+    /bin/sh -c 'pytest . {posargs}; ret=$?; [ $ret = 5 ] && exit 0 || exit $ret'
 
 [testenv:mypy]
 skip_install = true
