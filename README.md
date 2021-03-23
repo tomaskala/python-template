@@ -1,6 +1,7 @@
 # Python project template
 
 A basic structure for a Python project. The following is included:
+
 * A [.gitignore](.gitignore) file for Python projects.
 * [The Unlicense](https://unlicense.org/).
 * A directory structure for the [package itself](project_template) and for [unit
@@ -70,6 +71,7 @@ In addition, there is a [Makefile](Makefile) to automate some of these tasks.
 
 To setup autoformatting after each commit, use the following scripts. Make sure
 you have `black` and `isort` installed!
+
 * `.git/hooks/pre-commit`
   ```
   #!/usr/bin/sh
@@ -101,6 +103,7 @@ you have `black` and `isort` installed!
 ## Using the template
 
 To use the template, do the following:
+
 * Change all the annotated fields in the [setup.py](setup.py) file.
 * Rename the [project_template](project_template) directory to match the
   `package` variable in [setup.py](setup.py).
